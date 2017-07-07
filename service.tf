@@ -9,7 +9,7 @@ resource "aws_alb_target_group" "alb_target_group" {
   vpc_id   = "${data.aws_subnet.vpc.vpc_id}"
 
   health_check {
-    path = "${var.heath_check_path}"
+    path = "${var.health_check_path}"
   }
 }
 

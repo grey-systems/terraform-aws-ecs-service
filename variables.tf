@@ -94,7 +94,7 @@ variable "service_allowed_cidr_blocks" {
   default = ["0.0.0.0/0"]
 }
 
-variable "heath_check_path" {
+variable "health_check_path" {
   type    = "string"
   default = "/"
 }
