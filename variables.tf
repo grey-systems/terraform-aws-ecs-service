@@ -78,7 +78,7 @@ variable "placement_strategy_field" {
 // route53 zone id. If provided the module will create a dns record named ${name}.{route53_dns}
 // for the ALB (CNAME record)
 variable "route53_zone_id" {
-  type = "string"
+  type    = "string"
   default = ""
 }
 
@@ -89,8 +89,12 @@ variable "desired_count" {
 }
 
 // CIDRs allowed to access the ALB.
-variable "service_allowed_cidr_blocks"
-{
-  type = "list"
+variable "service_allowed_cidr_blocks" {
+  type    = "list"
   default = ["0.0.0.0/0"]
+}
+
+variable "heath_check_path" {
+  type    = "string"
+  default = "/"
 }

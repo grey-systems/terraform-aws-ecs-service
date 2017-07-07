@@ -7,6 +7,10 @@ resource "aws_alb_target_group" "alb_target_group" {
   port     = "${var.container_port}"
   protocol = "${var.container_protocol}"
   vpc_id   = "${data.aws_subnet.vpc.vpc_id}"
+
+  health_check {
+    path = "${var.heath_check_path}"
+  }
 }
 
 resource "aws_alb" "alb" {
