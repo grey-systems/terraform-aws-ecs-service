@@ -1,4 +1,4 @@
-x# terraform-aws-ecs-service
+# terraform-aws-ecs-service
 
 This repo contains a [Terraform](https://terraform.io/) module to create an Amazon ECS Service in a ECS Cluster with HA support
 
@@ -25,6 +25,27 @@ Module usage:
 
 Inputs
 ---------
+
+| Name | Description | Default | Required |
+|------|-------------|:-----:|:-----:|
+| cluster_id | The ID of the cluster in which this service will be created | - | yes |
+| container_name | Container's name to pull | - | yes |
+| container_port | The port in which the container is listening | `80` | no |
+| container_protocol | The protocol in which the container is listening | `HTTP` | no |
+| desired_count | ECS Service desired count | `1` | no |
+| environment | used as prefix to name resources | - | yes |
+| health_check_path | The destination for the health check request | `/` | no |
+| internal | Determines if the ecs service ALB will be private or public | `true` | no |
+| name | The name of the ecs service | - | yes |
+| placement_strategy_field | ECS Service placement strategy field | `attribute:ecs.availability-zone` | no |
+| placement_strategy_type | ECS Service placement strategy | `spread` | no |
+| route53_zone_id | route53 zone id. If provided the module will create a dns record named ${name}.{route53_dns} for the ALB (CNAME record) | `` | no |
+| service_allowed_cidr_blocks | CIDRs allowed to access the ALB. | `<list>` | no |
+| service_iam_role_arn | Service IAM role ARN (must be already created). Check [terraform-ecs-cluster](https://github.com/grey-systems/terraform-ecs-cluster) module, that module creates a cluster and a service iam role following AWS recommendations to be used as ecs service iam role. | - | yes |
+| service_port | The port in which the ALB will be listening | `80` | no |
+| service_protocol | Protocol for ALB | `HTTP` | no |
+| subnet_ids | List of VPC subnets to balance the ALBB | - | yes |
+| task_definition | AWS ECS Task definition | - | yes |
 
 
 Contributing

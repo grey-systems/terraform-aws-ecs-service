@@ -94,6 +94,7 @@ variable "service_allowed_cidr_blocks" {
   default = ["0.0.0.0/0"]
 }
 
+// The destination for the health check request
 variable "health_check_path" {
   type    = "string"
   default = "/"

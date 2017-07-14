@@ -1,18 +1,18 @@
-Contributing to terraform-ecs-cluster
+Contributing to terraform-aws-ecs-service
 =======================
 
-The easiest ways to contribute to `terraform-ecs-cluster` are:
+The easiest ways to contribute to `terraform-aws-ecs-service` are:
 
 
   * Creating a new [issue].
   * Forking the repository, make your contribution and submit a pull request.
     See [Git Flow](#git-flow) for further information.
 
-[issue]: https://github.com/grey-systems/terraform-ecs-cluster/issues/new
+[issue]: https://github.com/grey-systems/terraform-aws-ecs-service/issues/new
 
 Git Flow
 --------
-We chose to use the [Git flow branching model][flow] for `terraform-ecs-cluster`, so you are
+We chose to use the [Git flow branching model][flow] for `terraform-aws-ecs-service`, so you are
 kindly required to follow the same model when making your contributions.  That
 basically means that:
 
