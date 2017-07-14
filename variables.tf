@@ -99,3 +99,8 @@ variable "health_check_path" {
   type    = "string"
   default = "/"
 }
+
+// The DNS name of the application load balancer
+output "alb_dns_name" {
+  value = "${aws_alb.alb.dns_name}"
+}

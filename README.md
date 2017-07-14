@@ -48,6 +48,14 @@ Inputs
 | task_definition | AWS ECS Task definition | - | yes |
 
 
+Outputs
+---------
+
+| Name | Description |
+|------|-------------|
+| alb_dns_name | The DNS name of the application load balancer |
+
+
 Contributing
 ------------
 Everybody is welcome to contribute. Please, see [`CONTRIBUTING`][contrib] for further information.
