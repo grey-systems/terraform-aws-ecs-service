@@ -63,3 +63,8 @@ resource "aws_route53_record" "service_dns" {
   ttl     = "300"
   type    = "CNAME"
 }
+
+output "service_dns"
+{
+  value = "${aws_alb.alb.dns_name}"
+}
