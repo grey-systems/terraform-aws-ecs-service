@@ -1,4 +1,4 @@
-x# terraform-aws-ecs-service
+# terraform-aws-ecs-service
 
 This repo contains a [Terraform](https://terraform.io/) module to create an Amazon ECS Service in a ECS Cluster with HA support
 
