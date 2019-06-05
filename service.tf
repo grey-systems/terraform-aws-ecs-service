@@ -44,7 +44,8 @@ resource "aws_ecs_service" "ecs_service" {
   iam_role        = "${var.service_iam_role_arn}"
   desired_count   = "${var.desired_count}"
 
-  placement_strategy {
+   ordered_placement_strategy {
+
     type  = "${var.placement_strategy_type}"
     field = "${var.placement_strategy_field}"
   }
